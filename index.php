@@ -15,11 +15,11 @@
     <body>
 		<h1>StrongLifts to Progression</h1>
 
-		<p>This tool can be used to import data from StrongLifts into the Android app Progression. It requires the paid version of StrongLifts which is capable of exporting data. It also requires being able to browse add and remove files from your device's internal storage, either by connecting it to a PC or by using one of many available file manager applications available in the Play Store. This method presumes you have not yet begun using Progression but would like to make the switch. If you are already using Progression, the method below will destroy your Progression data.</p>
+		<p>This tool can be used to import data from StrongLifts into the Android app Progression. It requires the paid version of StrongLifts which is capable of exporting data. It also requires being able to browse add and remove files from your device's internal storage, either by connecting it to a PC or by using one of many file manager applications available in the Play Store. This method presumes you have not yet begun using Progression but would like to make the switch. If you are already using Progression, the method below will destroy your Progression data.</p>
 
 		<h2>Instructions</h2>
 		<ol>
-			<li>Export a CSV from the StrongLifts app. This is a feature of the paid app..</li>
+			<li>Export a CSV from the StrongLifts app. This is a feature of the paid app.</li>
 			<li>Select the file using the input below.</li>
 			<li>Submit the file. If successfull, you should see text appear in both of the text boxes below. There may be a slight delay, particularly if you have a lot of data in StrongLifts.</li>
 			<li>Click "Download fws.json". In most browsers this should begin downloading a file called <code>fws.json</code>. If it opens a new browser window, save the resulting text as <code>fws.json</code>.</li>
