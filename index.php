@@ -17,6 +17,8 @@
 
 		<p>This tool can be used to import data from StrongLifts into the Android app Progression. It requires the paid version of StrongLifts which is capable of exporting data. It also requires being able to browse add and remove files from your device's internal storage, either by connecting it to a PC or by using one of many file manager applications available in the Play Store. This method presumes you have not yet begun using Progression but would like to make the switch. If you are already using Progression, the method below will destroy your Progression data.</p>
 
+		<p>This worked for me, it might not work for you. I take no responsibility for anything you do messing with the files on your device.</p>
+
 		<h2>Instructions</h2>
 		<ol>
 			<li>Export a CSV from the StrongLifts app. This is a feature of the paid app.</li>
