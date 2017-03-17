@@ -1,6 +1,7 @@
 <?php 
 date_default_timezone_set('America/Edmonton');
 
+set_include_path('.:');
 spl_autoload_register();
  
 use helpers\Fn;
