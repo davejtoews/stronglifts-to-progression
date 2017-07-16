@@ -3,6 +3,7 @@
 namespace functions;
 
 function getArrayFromCsv($file) {
+
 	$array = $fields = array(); //$i = 0;
 	$handle = @fopen($file, "r");
 	if ($handle) {

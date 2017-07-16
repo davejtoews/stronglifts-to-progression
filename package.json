@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "bourbon": "davejtoews/bourbon",

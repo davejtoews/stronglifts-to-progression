@@ -1,6 +1,10 @@
 <?php 
 date_default_timezone_set('America/Edmonton');
 
+ini_set("log_errors", 1);
+ini_set("error_log", "php-error.log");
+ini_set('auto_detect_line_endings', TRUE);
+
 spl_autoload_register( function ($className) {
     $className = ltrim($className, '\\');
     $fileName  = '';
@@ -17,7 +21,13 @@ spl_autoload_register( function ($className) {
  
 use helpers\Fn;
 
-$array = Fn::getArrayFromCsv($_FILES['slCsv']['tmp_name']);
+$file = $_FILES['slCsv']['tmp_name'];
+
+//Strip newlines within notes
+$contents = file_get_contents($file);
+file_put_contents($file, preg_replace("/(?<!,)[\n\r]/", "", $contents));
+
+$array = Fn::getArrayFromCsv($file);
 $data = Fn::getRelevantDataFromArray($array);
 $workouts = array_map(array('helpers\Fn', 'buildWorkout'), $data);
 
