@@ -1,0 +1,5 @@
+[14-Nov-2017 19:56:33 America/Edmonton] PHP Warning:  file_get_contents(): Filename cannot be empty in /Users/dave/Sites/sl2prog/ajax.php on line 27
+[14-Nov-2017 19:56:33 America/Edmonton] PHP Warning:  file_put_contents(): Filename cannot be empty in /Users/dave/Sites/sl2prog/ajax.php on line 28
+[14-Nov-2017 19:56:33 America/Edmonton] PHP Warning:  Cannot modify header information - headers already sent by (output started at /Users/dave/Sites/sl2prog/ajax.php:27) in /Users/dave/Sites/sl2prog/ajax.php on line 37
+[14-Nov-2017 20:16:47 America/Edmonton] PHP Parse error:  parse error, expecting `')'' in /Users/dave/Sites/sl2prog/functions/buildProgram.php on line 20
+[14-Nov-2017 20:16:51 America/Edmonton] PHP Parse error:  parse error, expecting `')'' in /Users/dave/Sites/sl2prog/functions/buildProgram.php on line 20

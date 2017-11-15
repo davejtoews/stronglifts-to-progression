@@ -4,6 +4,8 @@ namespace functions;
 function buildActivity($exercise) {
 	$key = [
 		'Squat' => [
+			"@type" => "MuscleActivity",
+			"custom" => false,
 	        "id" => "150",
 	        "name" => "Barbell Squat",
             "equipment" => 1,
@@ -14,6 +16,8 @@ function buildActivity($exercise) {
 	        ]
 		],
 		'Overhead press' => [
+			"@type" => "MuscleActivity",
+			"custom" => false,
 	        "id" => "75",
 	        "name" => "Barbell Shoulder Press",
 	        "mainTargetMuscle" => 7,
@@ -22,6 +26,8 @@ function buildActivity($exercise) {
 	        ]			
 		],
 		'Deadlift' => [
+			"@type" => "MuscleActivity",
+			"custom" => false,
 	        "id" => "129",
 	        "name" => "Barbell Deadlift",
 	        "mainTargetMuscle" => 2,
@@ -32,6 +38,8 @@ function buildActivity($exercise) {
 	        ]
 		],
 		'Bench press' => [
+			"@type" => "MuscleActivity",
+			"custom" => false,
 	        "id" => "7",
 	        "name" => "Barbell Bench Press",
 	        "mainTargetMuscle" => 5,
@@ -41,6 +49,8 @@ function buildActivity($exercise) {
 	        ]
 		],
 		'Barbell row' => [
+			"@type" => "MuscleActivity",
+			"custom" => false,
 	        "id" => "109",
 	        "name" => "Bent-Over Barbell Row",
 	        "mainTargetMuscle" => 2,
@@ -57,6 +67,8 @@ function buildActivity($exercise) {
 
 	$activity['performance']['completedSets'] = [];
 	$activity['performanceTarget']['parameters'] = [];
+	$activity['performanceTarget']['groupIndex'] = -1;
+	$activity['performanceTarget']['restPerSet'] = 0;
 
 	foreach ($exercise['sets'] as $i=>$set) {
 		$completed = [];
@@ -64,11 +76,15 @@ function buildActivity($exercise) {
 		$completed['completedAt'] = $exercise['start'] + ($i + 1) * 60 * 1000 * 3;
 		$completed['reps'] = intval($set);
 		$completed['weight'] = floatval($exercise['weight']);
+		$completed['duration'] = 0;
+		$completed['mark'] = 0;
 		array_push($activity['performance']['completedSets'], $completed);
 
 		$parameter = [];
 		$parameter['minReps'] = 5;
 		$parameter['maxReps'] = 5;
+		$parameter['allOut'] = false;
+		$parameter['mark'] = 0;
 		if($i) {
 			$parameter['index'] = $i;
 		}
